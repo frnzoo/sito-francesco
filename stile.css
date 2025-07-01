@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+  }
+  
+  header {
+    background: #2c3e50;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  .profilo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #219150;
+  }
+  
+  section {
+    padding: 40px 20px;
+  }
+  
+  footer {
+    background: #ddd;
+    padding: 20px;
+    font-size: 0.9em;
+  }

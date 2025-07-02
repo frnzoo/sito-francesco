@@ -14,19 +14,20 @@
       <li><a href="#contatti">Contatti</a></li>
     </ul>
   </nav>
+
   <header>
-    <img src="profilo.jpg" alt="Foto di Francesco" class="profilo">
-    <h1>Ciao, sono Francesco</h1>
-    <p>Costruttore del mio futuro digitale.</p>
-    <a href="#contatti" class="btn">Contattami</a>
+    <img src="profilo.jpg" alt="Foto di Francesco" class="profilo fade-in">
+    <h1 class="fade-in">Ciao, sono Francesco</h1>
+    <p class="fade-in">Costruttore del mio futuro digitale.</p>
+    <a href="#contatti" class="btn fade-in">Contattami</a>
   </header>
 
-  <section id="chi-sono">
+  <section id="chi-sono" class="fade-in">
     <h2>Chi sono</h2>
     <p>Sto creando il mio percorso nell'informatica. Questo sito è la mia base di partenza.</p>
   </section>
 
-  <section id="portfolio">
+  <section id="portfolio" class="fade-in">
     <h2>Portfolio</h2>
     <ul>
       <li>✔ Primo sito HTML/CSS pubblicato</li>
@@ -35,13 +36,29 @@
     </ul>
   </section>
 
-  <section id="contatti">
+  <section id="contatti" class="fade-in">
     <h2>Contatti</h2>
-    <p><a href="https://www.instagram.com/frnzoo" target="_blank">Instagram</a></p>
+    <form action="https://formspree.io/f/moqzjzld" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Nome" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Scrivi un messaggio…" required></textarea>
+      <button type="submit" class="btn">Invia</button>
+    </form>
   </section>
 
   <footer>
     <p>© 2025 Francesco Vuoso - Tutti i diritti riservati</p>
   </footer>
+
+  <!-- JS per scroll fluido -->
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href'))
+                .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
